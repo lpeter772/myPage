@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0.5rem;
+  border: none;
+}
+
+body {
+  background-color: #272727;
+  color: white;
+  font-family: "Baloo 2", cursive;
+}
+body header nav {
+  box-shadow: 0 8px 6px -6px black;
+}
+body header nav ul {
+  display: flex;
+}
+body header nav ul li {
+  padding: 1rem;
+}
+body header nav ul li a {
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+}
+body header nav ul li a:hover {
+  color: yellow;
+}
+body main section.main-part {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main h1 {
+  font-size: 3rem;
+}
+body main p {
+  font-size: 1.15rem;
+}
+body main div.all-inputs form input,
+body main div.all-inputs form select {
+  font-size: 1.05rem;
+  padding: 0.5rem;
+  margin: 0.35rem;
+  border: 0.25px soild rgb(39, 39, 21);
+  border-radius: 0.35rem;
+}
+body main div.all-inputs form select {
+  background-color: gray;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+body main div.all-inputs form select:hover {
+  background-color: white;
+}
+body main div.all-inputs form input.class-credits {
+  width: 6rem;
+}
+body main div.all-inputs form button {
+  cursor: pointer;
+  background-color: #272727;
+  border: none;
+}
+body main div.all-inputs form button i {
+  font-size: 1.25rem;
+  color: white;
+}
+body main button.plus-btn {
+  width: 2.5rem;
+  margin: 3rem 0rem;
+  border: none;
+  background-color: #272727;
+  cursor: pointer;
+}
+body main button.plus-btn i {
+  font-size: 2.5rem;
+  color: white;
+}
+body main div.result {
+  border: 3px solid red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  animation-name: border_color;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+body main div.result p {
+  margin-top: 2rem;
+}
+body main div.result h2 {
+  font-size: 3.5rem;
+  margin-top: -0.8rem;
+}
+
+.remove {
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes border_color {
+  0% {
+    border-color: red;
+  }
+  33% {
+    border-color: limegreen;
+  }
+  66% {
+    border-color: yellow;
+  }
+}/*# sourceMappingURL=style.css.map */

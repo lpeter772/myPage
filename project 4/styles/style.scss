@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0.5rem;
+  border: none;
+}
+
+body {
+  background-color: #272727;
+  color: white;
+  font-family: "Baloo 2", cursive;
+  // section.animation-wrapper {
+  //   position: fixed;
+  //   width: 100%;
+  //   height: 100vh;
+  //   background-color: white;
+  //   section.animation {
+  //     height: 80vh;
+  //     margin-top: 10vh;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     .hero {
+  //       width: 100%;
+  //       height: 0;
+  //       img {
+  //         width: 100%;
+  //         height: 100%;
+  //         object-fit: cover;
+  //       }
+  //     }
+  //   }
+  //   .slider {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     height: 100vh;
+  //     width: 100%;
+  //     background: linear-gradient(to right, rgb(144, 144, 144), black);
+  //     z-index: -1;
+  //   }
+  // }
+  header {
+    nav {
+      box-shadow: 0 8px 6px -6px black;
+      ul {
+        display: flex;
+        li {
+          padding: 1rem;
+          a {
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            &:hover {
+              color: yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section.main-part {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.15rem;
+    }
+    div.all-inputs {
+      form {
+        input,
+        select {
+          font-size: 1.05rem;
+          padding: 0.5rem;
+          margin: 0.35rem;
+          border: 0.25px soild rgb(39, 39, 21);
+          border-radius: 0.35rem;
+        }
+
+        select {
+          background-color: gray;
+          cursor: pointer;
+          outline: none;
+          appearance: none;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          &:hover {
+            background-color: white;
+          }
+        }
+
+        input.class-credits {
+          width: 6rem;
+        }
+
+        button {
+          cursor: pointer;
+          background-color: #272727;
+          border: none;
+          i {
+            font-size: 1.25rem;
+            color: white;
+          }
+        }
+      }
+    }
+
+    button.plus-btn {
+      width: 2.5rem;
+      margin: 3rem 0rem;
+      border: none;
+      background-color: #272727;
+      cursor: pointer;
+      i {
+        font-size: 2.5rem;
+        color: white;
+      }
+    }
+
+    div.result {
+      border: 3px solid red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      text-align: center;
+      animation-name: border_color;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      p {
+        margin-top: 2rem;
+      }
+      h2 {
+        font-size: 3.5rem;
+        margin-top: -0.8rem;
+      }
+    }
+  }
+}
+
+.remove {
+  transform: scale(0);
+  transition: all 0.5s ease;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes border_color {
+  0% {
+    border-color: red;
+  }
+  33% {
+    border-color: limegreen;
+  }
+  66% {
+    border-color: yellow;
+  }
+}

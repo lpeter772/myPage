@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Desmond" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>成績計算網站</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- 開場動畫 -->
+    <!-- <section class="animation-wrapper">
+      <section class="animation">
+        <div class="hero">
+          <img src="images/math.jpg" alt="math image" />
+        </div>
+      </section>
+      <div class="slider"></div>
+    </section> -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home </a></li>
+          <li><a href="#">Grade Analysis</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-part">
+        <h1>Grade Input Form</h1>
+        <div class="buttons">
+          <button class="btn sort-descending">降序排序</button>
+          <button class="btn sort-ascending">升序排序</button>
+        </div>
+        <div class="all-inputs">
+          <form>
+            <div class="grader">
+              <input
+                type="text"
+                placeholder="class category"
+                class="class-type"
+                list="opt"
+              /><!-- 
+               --><input
+                type="text"
+                placeholder="class number"
+                class="class-number"
+              /><!-- 
+              --><input
+                type="number"
+                placeholder="credits"
+                min="0"
+                max="6"
+                class="class-credit"
+              /><!-- 
+              --><select name="select" class="select">
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option></select
+              ><!-- 
+              --><button class="trash-button">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </form>
+          <form>
+            <div class="grader">
+              <input
+                type="text"
+                placeholder="class category"
+                class="class-type"
+                list="opt"
+              /><!-- 
+              --><input
+                type="text"
+                placeholder="class number"
+                class="class-number"
+              /><!-- 
+              --><input
+                type="number"
+                placeholder="credits"
+                min="0"
+                max="6"
+                class="class-credit"
+              /><!-- 
+              --><select name="select" class="select">
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option></select
+              ><!-- 
+              --><button class="trash-button">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </form>
+          <form>
+            <div class="grader">
+              <input
+                type="text"
+                placeholder="class category"
+                class="class-type"
+                list="opt"
+              /><!-- 
+              --><input
+                type="text"
+                placeholder="class number"
+                class="class-number"
+              /><!-- 
+              --><input
+                type="number"
+                placeholder="credits"
+                min="0"
+                max="6"
+                class="class-credit"
+              /><!-- 
+              --><select name="select" class="select">
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option></select
+              ><!-- 
+              --><button class="trash-button">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <button class="plus-btn">
+          <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="result">
+          <p id="gpa-text">
+            Your semster<br />
+            GPA is
+          </p>
+          <h2 id="result-gpa">0.00</h2>
+        </div>
+      </section>
+    </main>
+    <datalist id="opt">
+      <option value="Accounting"></option>
+      <option value="American Sign Language"></option>
+      <option value="Anthropology"></option>
+      <option value="Art"></option>
+      <option value="Biological Science"></option>
+      <option value="Business Mgt"></option>
+      <option value="Career Development"></option>
+      <option value="Chemistry"></option>
+      <option value="Chinese"></option>
+      <option value="Communication Studies"></option>
+      <option value="Computer & Information Sciences"></option>
+      <option value="Computer Science"></option>
+      <option value="Criminal Justice"></option>
+      <option value="Economics"></option>
+      <option value="Education"></option>
+      <option value="Elementary Education"></option>
+      <option value="Emergency Management"></option>
+      <option value="English"></option>
+      <option value="English as Int'l Language"></option>
+      <option value="Entrepreneurship"></option>
+      <option value="Exercise Sport Science"></option>
+      <option value="Film"></option>
+      <option value="Finance"></option>
+      <option value="Forensic Science"></option>
+      <option value="French"></option>
+      <option value="Geography"></option>
+      <option value="Hawaiian"></option>
+      <option value="Hawaiian Studies"></option>
+      <option value="Health"></option>
+      <option value="History"></option>
+      <option value="Home Economics"></option>
+      <option value="Hospitality Tourism Mgt"></option>
+      <option value="Humanities"></option>
+      <option value="Information System"></option>
+      <option value="Information Technology"></option>
+      <option value="International Cultural Studies"></option>
+      <option value="Intercultural Peacebuilding"></option>
+      <option value="Japanese"></option>
+      <option value="Linguistics"></option>
+      <option value="Maori"></option>
+      <option value="Mathematics"></option>
+      <option value="Music"></option>
+      <option value="Oceanography"></option>
+      <option value="Pacific Island Studies"></option>
+      <option value="Physical Science"></option>
+      <option value="Political Science"></option>
+      <option value="Psychology"></option>
+      <option value="Public Management"></option>
+      <option value="Religion"></option>
+      <option value="Science"></option>
+      <option value="Samoan"></option>
+      <option value="Secondary Education"></option>
+      <option value="Social Work"></option>
+      <option value="Spanish"></option>
+      <option value="Special Education"></option>
+      <option value="Student Development"></option>
+      <option value="TESOL"></option>
+      <option value="Theatre"></option>
+      <option value="Tongan"></option>
+      <option value="World Language"></option>
+    </datalist>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
